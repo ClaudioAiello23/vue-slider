@@ -22,4 +22,4 @@ const slides = [
     }
 ];
 
-console.log(slides);
+// console.log(slides);
