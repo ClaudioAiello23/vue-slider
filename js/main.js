@@ -44,12 +44,10 @@ const app = createApp({
         prevSlide: function () {
             console.log('prev');
             this.selectedImg --;
-           
         },
         nextSlide: function () {
             console.log('next');
             this.selectedImg ++;
-           
         }
     }
 
