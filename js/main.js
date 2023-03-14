@@ -42,12 +42,16 @@ const app = createApp({
 
     methods: {
         prevSlide: function () {
-            console.log('prev');
             this.selectedImg --;
+            if (this.selectedImg < 0){
+                this.selectedImg = this.slides.length -1;
+            }            
         },
         nextSlide: function () {
-            console.log('next');
             this.selectedImg ++;
+            if (this.selectedImg > this.slides.length -1){
+                this.selectedImg = 0;
+            }
         }
     }
 
