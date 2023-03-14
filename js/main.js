@@ -1,3 +1,4 @@
+'use strict';
 
 /*Salvare in una variabile locale la funzione createApp, presa
 dalla variabile globale Vue; createApp è come un valore
@@ -53,6 +54,9 @@ const app = createApp({
                 this.selectedImg = 0;
             }
         },
+        /*Funzione che cerca la posizione dell'img selezionata; applicata al
+        click su una mini ImageBitmapRenderingContext(thumb) per far apparire
+        la corrispondente immagine grande*/
         selectedThumb (position) {
             this.selectedImg = position;
         }
