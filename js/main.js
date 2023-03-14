@@ -9,7 +9,8 @@ la funzione createApp; aggiungo un Array di oggetti*/
 const app = createApp({
     data() {
         return {
-           slides: [
+            selectedImg: 0,
+            slides: [
                 {
                     image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -40,8 +41,15 @@ const app = createApp({
     },
 
     methods: {
-        prova: function(){
-            this.slides[0].title='nuovo testo';
+        prevSlide: function () {
+            console.log('prev');
+            this.selectedImg --;
+           
+        },
+        nextSlide: function () {
+            console.log('next');
+            this.selectedImg ++;
+           
         }
     }
 
