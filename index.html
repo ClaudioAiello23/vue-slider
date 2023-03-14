@@ -33,7 +33,7 @@
                     <div class="prev" @click="prevSlide"></div>
                     <div class="next" @click="nextSlide"></div>
                     <!-- Lancio un ciclo For (VueJS) per ciclare le 5 img thumb sullo stesso div, e replicarle -->
-                    <div class="thumb active" v-for="img in slides" >
+                    <div class="thumb active" v-for="(img, position) in slides" @click="selectedThumb (position)">
                         <img v-bind:src="img.image" alt="film" />
                     </div>
                 </div>

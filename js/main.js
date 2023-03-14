@@ -41,17 +41,20 @@ const app = createApp({
     },
 
     methods: {
-        prevSlide: function () {
+        prevSlide () {
             this.selectedImg --;
             if (this.selectedImg < 0){
                 this.selectedImg = this.slides.length -1;
             }            
         },
-        nextSlide: function () {
+        nextSlide() {
             this.selectedImg ++;
             if (this.selectedImg > this.slides.length -1){
                 this.selectedImg = 0;
             }
+        },
+        selectedThumb (position) {
+            this.selectedImg = position;
         }
     }
 
