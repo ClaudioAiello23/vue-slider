@@ -9,8 +9,7 @@ la funzione createApp; aggiungo un Array di oggetti*/
 const app = createApp({
     data() {
         return {
-            imgActive: slides[0],// prova
-            slides: [
+           slides: [
                 {
                     image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -45,8 +44,8 @@ const app = createApp({
             this.slides[0].title='nuovo testo';
         }
     }
+
 }).mount('#app') //  invocare il metodo .mount() per connettere l'istanza al tag HTML con id #app e renderizzare l'app.
 
 
-console.log(slides)
 

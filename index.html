@@ -17,7 +17,7 @@
 
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-
+                 <!-- Oggetto immagine slider -->
                 <div class="item">
                     <img v-bind:src="slides[0].image" alt="Spiderman" />
                     <div class="text">
@@ -25,17 +25,18 @@
                         <p>{{ slides[0].text }}</p>
                     </div>
                 </div>
+                <!-- /Oggetto immagine slider -->
 
-
+                <!-- Oggetto immagine thumb -->
                 <div class="thumbs">
                     <div class="prev"></div>
                     <div class="next"></div>
-                    <!-- Lancio un ciclo For (VueJS) per replicare le 5 img thumb -->
+                    <!-- Lancio un ciclo For (VueJS) per ciclare le 5 img thumb sullo stesso div, e replicarle -->
                     <div class="thumb active" v-for="img in slides" >
-                        <img v-bind:src="slides[0].image" alt="film" />
+                        <img v-bind:src="img.image" alt="film" />
                     </div>
                 </div>
-
+                <!-- /Oggetto immagine thumb -->
             </div>
         </div>
 
@@ -45,7 +46,6 @@
 
     <!-- Collegamento CDN VueJS e file JavaScript -->
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
-    <script src="./js/script.js"></script>
     <script src="js/main.js"></script>
     <!-- /Collegamento CDN Vue JS e file JavaScript -->
 </body>
