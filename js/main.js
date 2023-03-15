@@ -59,14 +59,17 @@ const app = createApp({
         la corrispondente immagine grande*/
         selectedThumb (position) {
             this.selectedImg = position;
-        }
+        },
     },
     mounted(){
         setInterval(() => {
-            this.selectedImg ++;
-        }, 10000);
+          this.selectedImg ++;
+          if (this.selectedImg > this.slides.length -1){
+               this.selectedImg = 0;
+            }
+        }, 3000);
     }
-
+    
 }).mount('#app') //  invocare il metodo .mount() per connettere l'istanza al tag HTML con id #app e renderizzare l'app.
 
 
