@@ -60,6 +60,11 @@ const app = createApp({
         selectedThumb (position) {
             this.selectedImg = position;
         }
+    },
+    mounted(){
+        setInterval(() => {
+            this.selectedImg ++;
+        }, 10000);
     }
 
 }).mount('#app') //  invocare il metodo .mount() per connettere l'istanza al tag HTML con id #app e renderizzare l'app.
