@@ -11,6 +11,7 @@ const app = createApp({
     data() {
         return {
             selectedImg: 0,
+            timeSet: 3,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -62,12 +63,10 @@ const app = createApp({
         },
     },
     mounted(){
+        // Uso l'arrow function che riconosce "this" perchè eredita lo scope padre
         setInterval(() => {
-          this.selectedImg ++;
-          if (this.selectedImg > this.slides.length -1){
-               this.selectedImg = 0;
-            }
-        }, 3000);
+            this.nextSlide();
+        }, this.timeSet * 1000);
     }
     
 }).mount('#app') //  invocare il metodo .mount() per connettere l'istanza al tag HTML con id #app e renderizzare l'app.
